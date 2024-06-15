@@ -1,0 +1,46 @@
+using System;
+using System.IO;
+
+public class ExampleClass
+{
+    public void Method1()
+    {
+        int a = 5;
+        int b = 10;
+        int sum = a + b;
+        Console.WriteLine("Sum is: " + sum);
+    }
+
+    public void Method2()
+    {
+        int a = 5;
+        int b = 10;
+        int sum = a + b;
+        Console.WriteLine("Sum is: " + sum);
+    }
+
+    public void Method3()
+    {
+        int x = 2;
+        int y = 3;
+        int product = x * y;
+        Console.WriteLine("Product is: " + product);
+    }
+
+    public void Method4()
+    {
+        try
+        {
+            using (StreamReader sr = new StreamReader("file.txt"))
+            {
+                string line = sr.ReadToEnd();
+                Console.WriteLine(line);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("The file could not be read:");
+            Console.WriteLine(e.Message);
+        }
+    }
+}
